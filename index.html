@@ -32,7 +32,7 @@ body.inv #cur-ring{border-color:rgba(255,255,255,.3);}
 
 
 /* ─── LOGO ─── */
-.nav-logo-img { width: 44px; height: 44px; object-fit: contain; flex-shrink: 0; }
+.nav-logo-img { width: 54px; height: 54px; object-fit: contain; flex-shrink: 0; }
 .nav-logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
 .nav-logo-text { display: flex; flex-direction: column; line-height: 1; }
 .ft-logo-img { width: 64px; height: 64px; object-fit: contain; margin-bottom: .5rem; }
@@ -64,14 +64,14 @@ body.inv #cur-ring{border-color:rgba(255,255,255,.3);}
 #loader.out{opacity:0;visibility:hidden;pointer-events:none;}
 #loader > img{display:none;}
 .ld-word{font-family:'Cormorant Garamond',serif;font-size:clamp(4rem,12vw,9rem);color:var(--white);font-weight:300;letter-spacing:.2em;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:clamp(1rem,2vw,2rem);}
-.ld-word img{width:clamp(40px,4vw,60px);height:auto;object-fit:contain;flex-shrink:0;}
+.ld-word img{width:clamp(72px,6.5vw,104px);height:auto;object-fit:contain;flex-shrink:0;}
 .ld-ml{font-family:'Noto Serif Malayalam',serif;font-size:1.1rem;color:rgba(255,255,255,.3);letter-spacing:.2em;margin-top:.6rem;}
 .ld-line{width:0;height:1px;background:linear-gradient(90deg,transparent,rgba(184,133,42,.8),transparent);margin-top:2rem;transition:width 1.6s cubic-bezier(.76,0,.24,1);}
 .ld-line.on{width:220px;}
 .ld-pct{font-size:.65rem;letter-spacing:.5em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-top:1.2rem;transition:opacity .4s;}
 
 /* ─── NAV ─── */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.8rem 5vw;display:flex;justify-content:space-between;align-items:center;transition:transform .35s ease,opacity .35s ease,background .35s ease,backdrop-filter .35s ease,box-shadow .35s ease;will-change:transform,opacity;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1rem 5vw;display:flex;justify-content:space-between;align-items:center;transition:transform .35s ease,opacity .35s ease,background .35s ease,backdrop-filter .35s ease,box-shadow .35s ease;will-change:transform,opacity;}
 nav.nav-hidden{transform:translateY(-110%);opacity:0;pointer-events:none;}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--white);text-decoration:none;letter-spacing:.12em;}
 .nav-logo span{font-family:'Noto Serif Malayalam',serif;font-size:.75rem;display:block;letter-spacing:.15em;color:rgba(255,255,255,.45);margin-top:1px;}
@@ -85,16 +85,16 @@ nav.nav-hidden{transform:translateY(-110%);opacity:0;pointer-events:none;}
 
 /* ─── HERO ─── */
 .hero{height:100vh;min-height:680px;background:var(--black);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;position:relative;overflow:hidden;padding-top:90px;}
-#h-bg{position:absolute;inset:0;background:url('h8.jpg') center/cover;opacity:.42;will-change:transform;}
+#h-bg{position:absolute;inset:0;background:url('bga.jpg') center/cover;opacity:.42;will-change:transform;}
 .h-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.0) 45%,rgba(0,0,0,.85) 100%);}
 .h-grain{position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:200px;}
 .h-content{position:relative;z-index:2;text-align:center;padding:0 2rem;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;}
-.h-eyebrow{font-size:.62rem;letter-spacing:.55em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:2rem;opacity:0;transform:translateY(18px);animation:fu 1s ease 1.8s forwards;}
-.h-ml{font-family:'Noto Serif Malayalam',serif;font-size:1.15rem;color:rgba(255,255,255,.3);letter-spacing:.1em;margin-bottom:.4rem;opacity:0;animation:fu 1s ease 2s forwards;}
+.h-eyebrow{font-size:.62rem;letter-spacing:.55em;text-transform:uppercase;color:rgba(255,255,255,.72);text-shadow:0 4px 18px rgba(0,0,0,.35);margin-bottom:2rem;opacity:0;transform:translateY(18px);animation:fu 1s ease 1.8s forwards;}
+.h-ml{font-family:'Noto Serif Malayalam',serif;font-size:1.15rem;color:rgba(255,255,255,.58);text-shadow:0 4px 18px rgba(0,0,0,.35);letter-spacing:.1em;margin-bottom:.4rem;opacity:0;animation:fu 1s ease 2s forwards;}
 .h-title{font-family:'Cormorant Garamond',serif;font-size:clamp(5rem,14vw,13rem);font-weight:300;color:var(--white);line-height:.9;letter-spacing:-.01em;opacity:0;transform:translateY(50px);animation:fu 1.4s cubic-bezier(.16,1,.3,1) 2.1s forwards;}
 .h-title em{font-style:italic;color:rgba(255,255,255,.7);}
 .h-rule{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-l),transparent);margin:2.2rem auto;opacity:0;animation:fu 1s ease 2.5s forwards;}
-.h-sub{font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);opacity:0;animation:fu 1s ease 2.7s forwards;}
+.h-sub{font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.72);text-shadow:0 4px 18px rgba(0,0,0,.35);opacity:0;animation:fu 1s ease 2.7s forwards;}
 .h-actions{display:flex;gap:1.6rem;justify-content:center;margin-top:2.7rem;opacity:0;animation:fu 1s ease 3s forwards;flex-wrap:wrap;}
 .h-btn-p{background:var(--white);color:var(--black);padding:.8rem 2.2rem;font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;text-decoration:none;transition:all .3s;}
 .h-btn-p:hover{background:rgba(255,255,255,.92);transform:translateY(-2px);}
@@ -800,7 +800,7 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
     overflow:visible;
     flex-wrap:nowrap;
   }
-  .ld-word img{width:clamp(28px,8vw,42px);}
+  .ld-word img{width:clamp(48px,12vw,68px);}
   .ld-ml{
     font-size:.9rem;
     letter-spacing:.12em;
@@ -899,11 +899,12 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
   <div class="h-vignette"></div>
   <div class="h-grain"></div>
   <div class="h-content">
-    <p class="h-eyebrow">Est. Karunagappally · NH66 · Kerala</p>
+    <p class="h-eyebrow">Est. Karunagappally · Kerala</p>
     <p class="h-ml">നല്ല ഭൂമി</p>
-    <h1 class="h-title">Nalla<br><em>Bhoomi</em></h1>
+    <h1 class="h-title"><strong>Nalla<br><em>Bhoomi</em></strong></h1>
     <div class="h-rule"></div>
-    <p class="h-sub">Taste the Soul of Kerala</p>
+    <p class="h-sub">Authentic Kerala Restaurant</p>
+    <p class="h-sub">Discover the Authentic Taste & Soul of Kerala.</p>
     <div class="h-actions">
       <a href="#dishes" class="h-btn-p">Explore Our Menu</a>
       <div class="h-order-wrap">
