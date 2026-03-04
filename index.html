@@ -844,9 +844,7 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
     font-size:0;
   }
   .nav-logo-img{
-    width:42px;
-    height:42px;
-    filter:drop-shadow(0 0 18px rgba(212,168,75,.14));
+    display:none;
   }
   .nav-logo-text{
     display:none;
@@ -886,8 +884,8 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
     display:flex;
     align-items:center;
     gap:.8rem;
-    font-size:.58rem;
-    letter-spacing:.34em;
+    font-size:0;
+    letter-spacing:0;
     margin-bottom:.95rem;
     color:rgba(212,168,75,.82);
   }
@@ -897,6 +895,14 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
     height:1px;
     background:rgba(212,168,75,.52);
     flex:0 0 auto;
+  }
+  .h-eyebrow::after{
+    content:'Authentic Kerala Restaurant';
+    font-family:'Jost',sans-serif;
+    font-size:.58rem;
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    color:rgba(212,168,75,.82);
   }
   .h-ml{
     font-size:.95rem;
@@ -917,22 +923,17 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
     margin:1.55rem 0 1.25rem;
   }
   .h-rule + .h-sub{
-    max-width:17rem;
-    font-size:.7rem;
-    line-height:1.55;
-    letter-spacing:.26em;
-    color:rgba(249,246,240,.76);
-    text-transform:uppercase;
+    display:none;
   }
   .h-rule + .h-sub + .h-sub{
-    max-width:15.5rem;
-    margin-top:1rem;
+    max-width:17rem;
+    margin-top:0;
     font-family:'Cormorant Garamond',serif;
-    font-size:1.05rem;
+    font-size:1.1rem;
     line-height:1.6;
     letter-spacing:.02em;
     text-transform:none;
-    color:rgba(249,246,240,.62);
+    color:rgba(249,246,240,.72);
   }
   .h-actions{
     width:min(100%,18.75rem);
@@ -943,13 +944,16 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
   .h-btn-p,
   .h-order-btn,
   .h-btn-s{
+    display:flex;
     width:100%;
     justify-content:center;
+    align-items:center;
     min-height:54px;
     padding:1rem 1.2rem;
     font-family:'Jost',sans-serif;
     font-size:.62rem;
     letter-spacing:.28em;
+    text-align:center;
   }
   .h-btn-p{
     background:var(--gold);
@@ -976,9 +980,9 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
   }
   .h-vignette{
     background:
-      linear-gradient(106deg, rgba(8,5,2,.93) 0%, rgba(8,5,2,.88) 44%, rgba(8,5,2,.56) 62%, rgba(8,5,2,.24) 100%),
-      radial-gradient(circle at 78% 28%, rgba(212,168,75,.12) 0%, rgba(212,168,75,0) 28%),
-      radial-gradient(circle at 78% 76%, rgba(122,46,20,.22) 0%, rgba(122,46,20,0) 30%);
+      linear-gradient(106deg, rgba(8,5,2,.78) 0%, rgba(8,5,2,.7) 42%, rgba(8,5,2,.38) 62%, rgba(8,5,2,.12) 100%),
+      radial-gradient(circle at 78% 28%, rgba(212,168,75,.15) 0%, rgba(212,168,75,0) 32%),
+      radial-gradient(circle at 78% 76%, rgba(122,46,20,.16) 0%, rgba(122,46,20,0) 30%);
   }
   .about-photo-caption{
     background:none;
