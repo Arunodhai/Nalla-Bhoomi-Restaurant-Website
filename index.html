@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nalla Bhoomi Family Restaurant Karunagappally | Best Kerala Food</title>
 <meta name="description" content="Experience authentic Kerala traditions at Nalla Bhoomi, Karunagappally. Top-rated family dining with premium regional cuisine, EV charging, and a zero-waste mission.">
-<link rel="preload" as="image" href="image.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="1image.jpg" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,200;1,9..144,200&family=Jost:wght@300;400;500&family=Noto+Serif+Malayalam:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
@@ -86,7 +86,7 @@ nav.nav-hidden{transform:translateY(-110%);opacity:0;pointer-events:none;}
 
 /* ─── HERO ─── */
 .hero{height:100vh;min-height:680px;background:var(--black);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;position:relative;overflow:hidden;padding-top:90px;}
-#h-bg{position:absolute;inset:0;background:url('image.jpg') center/cover;opacity:.42;will-change:transform;}
+#h-bg{position:absolute;inset:0;background:url('1image.jpg') center/cover;opacity:.42;will-change:transform;}
 .h-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.0) 45%,rgba(0,0,0,.85) 100%);}
 .h-grain{position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:200px;}
 .h-content{position:relative;z-index:2;text-align:center;padding:0 2rem;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;}
@@ -809,6 +809,75 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
   .contact-grid > .rv.d2{padding-top:0;}
 }
 @media(max-width:600px){
+  nav{
+    justify-content:center;
+    padding:.7rem 1.25rem;
+  }
+  .nav-logo{
+    justify-content:center;
+    gap:.7rem;
+    text-align:left;
+  }
+  .nav-logo-img{
+    width:50px;
+    height:50px;
+  }
+  .nav-logo-text{
+    align-items:flex-start;
+  }
+  .nav-logo{
+    font-size:1.38rem;
+    letter-spacing:.1em;
+  }
+  .nav-logo span{
+    font-size:.72rem;
+    letter-spacing:.12em;
+  }
+  .hero{
+    min-height:100svh;
+    padding-top:106px;
+  }
+  .h-content{
+    width:100%;
+    padding:0 1.5rem 2.25rem;
+    justify-content:center;
+  }
+  .h-eyebrow{
+    font-size:.6rem;
+    letter-spacing:.42em;
+    margin-bottom:1.55rem;
+  }
+  .h-ml{
+    font-size:1.02rem;
+    margin-bottom:.5rem;
+  }
+  .h-title{
+    font-size:clamp(4.6rem,20vw,6.6rem);
+    line-height:.9;
+  }
+  .h-rule{
+    margin:1.8rem auto 1.55rem;
+  }
+  .h-sub{
+    max-width:17.5rem;
+    font-size:.8rem;
+    line-height:1.5;
+    letter-spacing:.22em;
+  }
+  .h-sub + .h-sub{
+    margin-top:1rem;
+  }
+  .h-actions{
+    width:100%;
+    margin-top:2.3rem;
+    gap:1rem;
+  }
+  .h-btn-p,
+  .h-order-btn,
+  .h-btn-s{
+    width:min(100%,21rem);
+    justify-content:center;
+  }
   .h-vignette{
     background:
       radial-gradient(circle at 50% 44%, rgba(255,214,150,.22) 0%, rgba(255,214,150,.12) 18%, rgba(0,0,0,0) 42%),
