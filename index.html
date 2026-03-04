@@ -482,6 +482,21 @@ nav.nav-hidden{transform:translateY(-110%);opacity:0;pointer-events:none;}
 .vip-card-caption{font-size:.66rem;color:rgba(255,255,255,.78);margin-top:.3rem;line-height:1.55;}
 
 /* ─── GALLERY STRIP ─── */
+.gallery-head{
+  padding:7rem 5vw 3rem;
+  background:var(--white);
+  text-align:center;
+}
+.gallery-head .s-tag{
+  justify-content:center;
+}
+.gallery-head-copy{
+  max-width:560px;
+  margin:1.2rem auto 0;
+  font-size:.9rem;
+  line-height:1.8;
+  color:var(--gray);
+}
 .gallery-strip{display:flex;height:min(52vw,620px);}
 .gl{flex:1;overflow:hidden;position:relative;transition:flex .85s cubic-bezier(.76,0,.24,1);cursor:none;}
 .gl:hover{flex:2.8;}
@@ -788,6 +803,7 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
   .ft-grid{grid-template-columns:1fr 1fr;gap:3rem;}
   .mg-grid{grid-template-columns:1fr;justify-items:center;}
   .gallery-strip{height:auto;flex-direction:column;}
+  .gallery-head{padding:5rem 5vw 2.5rem;}
   .gl{height:55vw;flex:1!important;}
   .gl:hover{flex:1!important;}
   .contact-grid > .rv.d2{padding-top:0;}
@@ -797,6 +813,9 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
     background:
       radial-gradient(circle at 50% 44%, rgba(255,214,150,.22) 0%, rgba(255,214,150,.12) 18%, rgba(0,0,0,0) 42%),
       radial-gradient(ellipse at center, rgba(0,0,0,.04) 18%, rgba(0,0,0,.72) 100%);
+  }
+  .about-photo-caption{
+    background:none;
   }
   .ld-word{
     font-size:clamp(2.4rem,11vw,4.2rem);
@@ -846,6 +865,8 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
   .mg-item{width:min(344px,100%);height:auto;aspect-ratio:344/487;}
   #pq-bg{background-position:78% center;}
   .lightbox{padding:1.25rem;}
+  .gallery-head{padding:4.5rem 1.25rem 2rem;}
+  .gallery-head-copy{font-size:.82rem;line-height:1.7;}
   .about-headline h2{font-size:clamp(34px,7vw,52px);}
   .about-feats{grid-template-columns:1fr;}
   .about-bottom{flex-direction:column;align-items:flex-start;gap:1.2rem;}
@@ -1062,22 +1083,22 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
     </div>
   </div>
   <div class="dishes-grid">
-    <div class="dish-card rv"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Chicken%3ABeef%20Kizhi%20Biriyani.avif" alt="Chicken and beef kizhi biriyani at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Signature</div><span class="dish-name">Kizhi Biriyani</span><span class="dish-desc">Leaf-sealed biriyani, the house legend</span></div></div>
-    <div class="dish-card rv d1"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Duck%20Mappas.avif" alt="Duck mappas at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Traditional</div><span class="dish-name">Duck Mappas</span><span class="dish-desc">Slow-cooked Kuttanad duck in rich gravy</span></div></div>
-    <div class="dish-card rv d2"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Fish%20Mango%20Curry%20%28king%20Fish%29.avif" alt="Fish mango curry at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Classic</div><span class="dish-name">Fish Mango Curry</span><span class="dish-desc">Tangy king fish curry with Kerala mango</span></div></div>
-    <div class="dish-card rv d3"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Beef%20Kochulli%20Roast.avif" alt="Beef kochulli roast at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Malabar</div><span class="dish-name">Beef Kochulli Roast</span><span class="dish-desc">Roasted beef with deep-spice Kerala finish</span></div></div>
-    <div class="dish-card rv"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Chicken%20Kondattam.avif" alt="Chicken kondattam at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Favourite</div><span class="dish-name">Chicken Kondattam</span><span class="dish-desc">Fiery fried chicken tossed in house masala</span></div></div>
-    <div class="dish-card rv d1"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Puttu%20Biriyani%20Beef%3AChicken.avif" alt="Puttu biriyani with beef or chicken at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Breakfast</div><span class="dish-name">Puttu Biriyani</span><span class="dish-desc">A bold Kerala breakfast built for appetite</span></div></div>
-    <div class="dish-card rv d2"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Chemmeen%20Shap%20Roast.avif" alt="Chemmeen shap roast at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Coastal</div><span class="dish-name">Chemmeen Shap Roast</span><span class="dish-desc">Backwater prawns in a toddy-shop style roast</span></div></div>
-    <div class="dish-card rv d3"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Kappa%20Biriyani%20Chicken.avif" alt="Kappa biriyani chicken at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Festive</div><span class="dish-name">Kappa Biriyani Chicken</span><span class="dish-desc">Tapioca and chicken, layered the local way</span></div></div>
-    <div class="dish-card rv"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Karimeen%20Pollichathu.png" alt="Karimeen pollichathu at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Regional</div><span class="dish-name">Karimeen Pollichathu</span><span class="dish-desc">Pearl spot wrapped and fire-roasted</span></div></div>
-    <div class="dish-card rv d1"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Mutton%20Biriyani.avif" alt="Mutton biriyani at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Southern</div><span class="dish-name">Mutton Biriyani</span><span class="dish-desc">Fragrant biriyani with tender mutton cuts</span></div></div>
-    <div class="dish-card rv d2"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Special%20Fish%20Mango%20Curry.avif" alt="Special fish mango curry at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">House Special</div><span class="dish-name">Special Fish Mango Curry</span><span class="dish-desc">A sharper, richer signature fish curry profile</span></div></div>
-    <div class="dish-card rv d3"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Fish%20Curry%20Meals.avif" alt="Fish curry meals at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Meals</div><span class="dish-name">Fish Curry Meals</span><span class="dish-desc">Kerala meals anchored by a bold fish curry</span></div></div>
-    <div class="dish-card rv"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Beef%20Coconut%20Fry.avif" alt="Beef coconut fry at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Street</div><span class="dish-name">Beef Coconut Fry</span><span class="dish-desc">Coconut-rich fry with deep roast flavour</span></div></div>
-    <div class="dish-card rv d1"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Chicken%20Kuttanadu.avif" alt="Chicken Kuttanadu at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Delicate</div><span class="dish-name">Chicken Kuttanadu</span><span class="dish-desc">A softer backwater-style curry expression</span></div></div>
-    <div class="dish-card rv d2"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Kanava%20Pepper%20Roast.avif" alt="Kanava pepper roast at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Malabar</div><span class="dish-name">Kanava Pepper Roast</span><span class="dish-desc">Squid roasted with pepper-forward spice</span></div></div>
-    <div class="dish-card rv d3"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Muyal%20Roast.avif" alt="Muyal roast at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag">Fragrant</div><span class="dish-name">Muyal Roast</span><span class="dish-desc">Slow-roasted rabbit with intense Kerala masala</span></div></div>
+    <div class="dish-card rv"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Chicken%3ABeef%20Kizhi%20Biriyani.avif" alt="Chicken and beef kizhi biriyani at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Kizhi Biriyani</span><span class="dish-desc">Leaf-sealed biriyani, the house legend</span></div></div>
+    <div class="dish-card rv d1"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Duck%20Mappas.avif" alt="Duck mappas at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Duck Mappas</span><span class="dish-desc">Slow-cooked Kuttanad duck in rich gravy</span></div></div>
+    <div class="dish-card rv d2"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Fish%20Mango%20Curry%20%28king%20Fish%29.avif" alt="Fish mango curry at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Fish Mango Curry</span><span class="dish-desc">Tangy king fish curry with Kerala mango</span></div></div>
+    <div class="dish-card rv d3"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Beef%20Kochulli%20Roast.avif" alt="Beef kochulli roast at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Beef Kochulli Roast</span><span class="dish-desc">Roasted beef with deep-spice Kerala finish</span></div></div>
+    <div class="dish-card rv"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Chicken%20Kondattam.avif" alt="Chicken kondattam at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Chicken Kondattam</span><span class="dish-desc">Fiery fried chicken tossed in house masala</span></div></div>
+    <div class="dish-card rv d1"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Puttu%20Biriyani%20Beef%3AChicken.avif" alt="Puttu biriyani with beef or chicken at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Puttu Biriyani</span><span class="dish-desc">A bold Kerala breakfast built for appetite</span></div></div>
+    <div class="dish-card rv d2"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Chemmeen%20Shap%20Roast.avif" alt="Chemmeen shap roast at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Chemmeen Shap Roast</span><span class="dish-desc">Backwater prawns in a toddy-shop style roast</span></div></div>
+    <div class="dish-card rv d3"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Kappa%20Biriyani%20Chicken.avif" alt="Kappa biriyani chicken at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Kappa Biriyani Chicken</span><span class="dish-desc">Tapioca and chicken, layered the local way</span></div></div>
+    <div class="dish-card rv"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Karimeen%20Pollichathu.png" alt="Karimeen pollichathu at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Karimeen Pollichathu</span><span class="dish-desc">Pearl spot wrapped and fire-roasted</span></div></div>
+    <div class="dish-card rv d1"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Mutton%20Biriyani.avif" alt="Mutton biriyani at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Mutton Biriyani</span><span class="dish-desc">Fragrant biriyani with tender mutton cuts</span></div></div>
+    <div class="dish-card rv d2"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Special%20Fish%20Mango%20Curry.avif" alt="Special fish mango curry at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Special Fish Mango Curry</span><span class="dish-desc">A sharper, richer signature fish curry profile</span></div></div>
+    <div class="dish-card rv d3"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Fish%20Curry%20Meals.avif" alt="Fish curry meals at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Fish Curry Meals</span><span class="dish-desc">Kerala meals anchored by a bold fish curry</span></div></div>
+    <div class="dish-card rv"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Beef%20Coconut%20Fry.avif" alt="Beef coconut fry at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Beef Coconut Fry</span><span class="dish-desc">Coconut-rich fry with deep roast flavour</span></div></div>
+    <div class="dish-card rv d1"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Chicken%20Kuttanadu.avif" alt="Chicken Kuttanadu at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Chicken Kuttanadu</span><span class="dish-desc">A softer backwater-style curry expression</span></div></div>
+    <div class="dish-card rv d2"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Kanava%20Pepper%20Roast.avif" alt="Kanava pepper roast at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Kanava Pepper Roast</span><span class="dish-desc">Squid roasted with pepper-forward spice</span></div></div>
+    <div class="dish-card rv d3"><img src="Signature%20Dishes%20for%20Nalla%20Bhoomi/Muyal%20Roast.avif" alt="Muyal roast at Nalla Bhoomi"><div class="dish-overlay"></div><div class="dish-info"><div class="dish-tag"></div><span class="dish-name">Muyal Roast</span><span class="dish-desc">Slow-roasted rabbit with intense Kerala masala</span></div></div>
   </div>
 </section>
 
@@ -1098,7 +1119,7 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
     </div>
   </div>
   <div class="mg-footer rv">
-    <p style="font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.2);">Hover over menu cards to reveal</p>
+    <p style="font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.2);">Tap on the menu card to zoom.</p>
   </div>
 </section>
 
@@ -1149,6 +1170,11 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
 </section>
 
 <!-- ═══════════════ GALLERY STRIP ═══════════════ -->
+<section class="gallery-head">
+  <p class="s-tag">The Experience</p>
+  <h2 class="s-title">Dine, Recharge, <em>Unwind</em></h2>
+  <p class="gallery-head-copy">A glimpse of the spaces, comfort, and thoughtful details that make Nalla Bhoomi more than just a stop for food.</p>
+</section>
 <div class="gallery-strip">
   <div class="gl img-open"><img src="Floating%20images/1.png" alt="Nalla Bhoomi exterior"></div>
   <div class="gl img-open"><img src="Floating%20images/_2.png" alt="Nalla Bhoomi ambience"></div>
