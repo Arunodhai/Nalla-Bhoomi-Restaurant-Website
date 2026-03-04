@@ -83,8 +83,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.8rem 5vw;display:f
 
 /* ─── HERO ─── */
 .hero{height:100vh;min-height:680px;background:var(--black);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;position:relative;overflow:hidden;padding-top:90px;}
-#h-bg{position:absolute;inset:0;background:url('Restaurant.png') center/cover;opacity:.28;will-change:transform;}
-.h-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,rgba(0,0,0,.75) 100%);}
+#h-bg{position:absolute;inset:0;background:url('h8.jpg') center/cover;opacity:.28;will-change:transform;}
+.h-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.02) 28%,rgba(0,0,0,.56) 100%);}
 .h-grain{position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:200px;}
 .h-content{position:relative;z-index:2;text-align:center;padding:0 2rem;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;}
 .h-eyebrow{font-size:.62rem;letter-spacing:.55em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:2rem;opacity:0;transform:translateY(18px);animation:fu 1s ease 1.8s forwards;}
@@ -155,14 +155,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.8rem 5vw;display:f
 .dish-ph-hint{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#a89d8e;margin-top:.1rem;}
 .dish-card img{transition:transform .8s cubic-bezier(.76,0,.24,1),filter .5s;}
 .dish-card:hover img{transform:scale(1.1);filter:brightness(1.08);}
-.dish-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.88) 0%,transparent 55%);opacity:0;transition:opacity .4s;}
+.dish-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.5) 34%,transparent 62%);opacity:1;transition:opacity .4s;}
 .dish-card:hover .dish-overlay{opacity:1;}
-.dish-info{position:absolute;bottom:0;left:0;right:0;padding:1.8rem 1.5rem;transform:translateY(6px);transition:transform .45s;}
-.dish-card:hover .dish-info{transform:translateY(0);}
+.dish-info{position:absolute;bottom:0;left:0;right:0;padding:1.8rem 1.5rem;transform:none;transition:transform .45s;}
+.dish-card:hover .dish-info{transform:none;}
 .dish-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--white);display:block;}
-.dish-desc{font-size:.68rem;color:rgba(255,255,255,.55);margin-top:.3rem;letter-spacing:.05em;}
-.dish-tag{font-size:.55rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold-l);margin-bottom:.4rem;opacity:0;transform:translateY(5px);transition:opacity .4s .05s,transform .4s .05s;}
-.dish-card:hover .dish-tag{opacity:1;transform:translateY(0);}
+.dish-desc{font-size:.68rem;color:rgba(255,255,255,.82);margin-top:.3rem;letter-spacing:.05em;}
+.dish-tag{font-size:.55rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold-l);margin-bottom:.4rem;opacity:1;transform:none;transition:opacity .4s .05s,transform .4s .05s;}
+.dish-card:hover .dish-tag{opacity:1;transform:none;}
 
 /* ─── MENU GALLERY ─── */
 .menu-gal{background:var(--black);}
@@ -214,6 +214,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.8rem 5vw;display:f
 .vip-card{position:relative;aspect-ratio:3/4;overflow:hidden;cursor:none;background:#e0d9cf;}
 .vip-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;filter:none;}
 .vip-card:hover img{transform:scale(1.08);filter:none;}
+.vip-card.img-balagopal img{object-position:58% center;}
+.vip-card.img-sreejesh img{object-position:40% center;}
 .vip-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:.5rem;background:linear-gradient(145deg,#e5ddd3,#cfc5b5);}
 .vip-ph-icon{font-size:2rem;opacity:.3;}
 .vip-ph-name{font-family:'Cormorant Garamond',serif;font-size:.88rem;font-style:italic;color:#7a6e60;text-align:center;padding:0 .6rem;line-height:1.4;}
@@ -435,7 +437,7 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
   <div class="h-stats">
     <div class="h-stat"><div class="h-stat-num" id="cntHero">0</div><div class="h-stat-lbl">Verified Reviews</div></div>
     <div class="h-divider"></div>
-    <div class="h-stat"><div class="h-stat-num">4.4 ★</div><div class="h-stat-lbl">Avg Rating</div></div>
+    <div class="h-stat"><div class="h-stat-num">4.2 ★</div><div class="h-stat-lbl">Avg Rating</div></div>
     <div class="h-divider"></div>
     <div class="h-stat"><div class="h-stat-num">⚡ EV</div><div class="h-stat-lbl">GOEC 90kw Fast Charger</div></div>
     <div class="h-divider"></div>
@@ -477,8 +479,8 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
         <img src="Restaurant%20Image1.png" alt="Nalla Bhoomi dining space in Karunagappally" class="about-img">
         <div class="about-img-caption">Kerala Culinary Heritage</div>
         <div class="about-badge">
-          <div class="about-badge-num">4.4 ★</div>
-          <div class="about-badge-lbl">13,000+ Reviews</div>
+          <div class="about-badge-num">4.2 ★</div>
+          <div class="about-badge-lbl">4200+ Reviews</div>
         </div>
       </div>
       <div class="rv d2">
@@ -486,7 +488,7 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
         <h2 class="s-title">A <em>Good Earth,</em><br>A Great Table.</h2>
         <p class="about-body">Welcome to <strong>Nalla Bhoomi Family Restaurant</strong>, Karunagappally. More than just a dining destination — we are a celebration of Kerala's rich culinary heritage. A landmark for food lovers who crave the authentic, the fresh, and the extraordinary.</p>
         <div class="about-feats">
-          <div class="about-feat"><span class="about-feat-icon">⭐</span><div><div class="about-feat-t">13,000+ Reviews</div><div class="about-feat-d">Consistent 4.4-star rating on major platforms.</div></div></div>
+          <div class="about-feat"><span class="about-feat-icon">⭐</span><div><div class="about-feat-t">4200+ Reviews</div><div class="about-feat-d">Consistent 4.2-star rating on major platforms.</div></div></div>
           <div class="about-feat"><span class="about-feat-icon">🍃</span><div><div class="about-feat-t">Authentic Flavours</div><div class="about-feat-d">Hand-ground spices, time-honored Kerala recipes.</div></div></div>
           <div class="about-feat"><span class="about-feat-icon">⚡</span><div><div class="about-feat-t">EV Charging</div><div class="about-feat-d">GOEC 90kw Fast Charger — recharge while you dine.</div></div></div>
           <div class="about-feat"><span class="about-feat-icon">🌿</span><div><div class="about-feat-t">Zero Waste Mission</div><div class="about-feat-d">Nalla Bhoomi means a good earth. We protect it.</div></div></div>
@@ -582,18 +584,18 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
       </div>
     </div>
     <div class="vip-cards" style="margin-top:2px;">
-      <div class="vip-card rv"><img src="Vips/K%20N%20Balagopal.png" alt="K N Balagopal at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Government</div><div class="vip-card-name">K. N. Balagopal</div><div class="vip-card-caption">A proud visit from Kerala's Finance Minister on our dining floor.</div></div></div>
-      <div class="vip-card rv d1"><img src="Vips/J.%20Chinchu%20Rani%20.png" alt="J Chinchu Rani at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Government</div><div class="vip-card-name">J. Chinchu Rani</div><div class="vip-card-caption">A distinguished visit that reflects our strong local roots.</div></div></div>
-      <div class="vip-card rv d2"><img src="Vips/PR%20Sreejesh.png" alt="PR Sreejesh at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">National Icon</div><div class="vip-card-name">P. R. Sreejesh</div><div class="vip-card-caption">The wall of Indian hockey meets the flavours of Karunagappally.</div></div></div>
-      <div class="vip-card rv d3"><img src="Vips/Adoor%20Gopalakrishnan.png" alt="Adoor Gopalakrishnan at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Cinema</div><div class="vip-card-name">Adoor Gopalakrishnan</div><div class="vip-card-caption">A master storyteller visiting a table shaped by Kerala tradition.</div></div></div>
-      <div class="vip-card rv"><img src="Vips/Gokulam%20Gopalan.png" alt="Gokulam Gopalan at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Business</div><div class="vip-card-name">Gokulam Gopalan</div><div class="vip-card-caption">A memorable visit from one of Kerala's recognized business leaders.</div></div></div>
-      <div class="vip-card rv d1"><img src="Vips/Boby%20Chemmanur.png" alt="Boby Chemmanur at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Business</div><div class="vip-card-name">Boby Chemmanur</div><div class="vip-card-caption">Energy, warmth, and a lively dining-floor moment at Nalla Bhoomi.</div></div></div>
-      <div class="vip-card rv d2"><img src="Vips/Rajasenan.png" alt="Rajasenan at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Arts &amp; Cinema</div><div class="vip-card-name">Rajasenan</div><div class="vip-card-caption">Celebrating the spirit of Kerala cinema with an affectionate visit.</div></div></div>
-      <div class="vip-card rv d3"><img src="Vips/Urmila%20Unni.png" alt="Urmila Unni at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Arts</div><div class="vip-card-name">Urmila Unni</div><div class="vip-card-caption">Grace and cultural presence captured inside our restaurant.</div></div></div>
-      <div class="vip-card rv"><img src="Vips/Priyanka%20Anoop.png" alt="Priyanka Anoop at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Entertainment</div><div class="vip-card-name">Priyanka Anoop</div><div class="vip-card-caption">A bright visit that adds another chapter to our wall of fame.</div></div></div>
-      <div class="vip-card rv d1"><img src="Vips/Kalabhavan%20Prajod%20and%20wife.png" alt="Kalabhavan Prajod at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Entertainment</div><div class="vip-card-name">Kalabhavan Prajod</div><div class="vip-card-caption">A family moment with one of Kerala's well-known entertainers.</div></div></div>
-      <div class="vip-card rv d2"><img src="Vips/R%20L%20V%20Ramakrishnan.png" alt="RLV Ramakrishnan at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Culture</div><div class="vip-card-name">R. L. V. Ramakrishnan</div><div class="vip-card-caption">Art, discipline, and heritage brought into the Nalla Bhoomi story.</div></div></div>
-      <div class="vip-card rv d3"><img src="Vips/Haritha%20Savithri.png" alt="Haritha Savithri at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Literary</div><div class="vip-card-name">Haritha Savithri</div><div class="vip-card-caption">A meaningful visit from a strong cultural voice in Kerala.</div></div></div>
+      <div class="vip-card rv img-balagopal"><img src="Vips/K%20N%20Balagopal.png" alt="K N Balagopal at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Government</div><div class="vip-card-name">K. N. Balagopal</div><div class="vip-card-caption">Kerala's Finance Minister, visiting our dining floor.</div></div></div>
+      <div class="vip-card rv d1"><img src="Vips/J.%20Chinchu%20Rani%20.png" alt="J Chinchu Rani at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Government</div><div class="vip-card-name">J. Chinchu Rani</div><div class="vip-card-caption">Former Kerala Minister, sharing a distinguished visit.</div></div></div>
+      <div class="vip-card rv d2 img-sreejesh"><img src="Vips/PR%20Sreejesh.png" alt="PR Sreejesh at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">National Icon</div><div class="vip-card-name">P. R. Sreejesh</div><div class="vip-card-caption">Indian hockey legend and Olympian, at Nalla Bhoomi.</div></div></div>
+      <div class="vip-card rv d3"><img src="Vips/Adoor%20Gopalakrishnan.png" alt="Adoor Gopalakrishnan at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Cinema</div><div class="vip-card-name">Adoor Gopalakrishnan</div><div class="vip-card-caption">Acclaimed filmmaker, visiting a table shaped by Kerala tradition.</div></div></div>
+      <div class="vip-card rv"><img src="Vips/Gokulam%20Gopalan.png" alt="Gokulam Gopalan at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Business</div><div class="vip-card-name">Gokulam Gopalan</div><div class="vip-card-caption">Businessman and producer, sharing a memorable visit.</div></div></div>
+      <div class="vip-card rv d1"><img src="Vips/Boby%20Chemmanur.png" alt="Boby Chemmanur at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Business</div><div class="vip-card-name">Boby Chemmanur</div><div class="vip-card-caption">Entrepreneur and philanthropist, bringing energy to the dining floor.</div></div></div>
+      <div class="vip-card rv d2"><img src="Vips/Rajasenan.png" alt="Rajasenan at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Arts &amp; Cinema</div><div class="vip-card-name">Rajasenan</div><div class="vip-card-caption">Film director and actor, celebrating Kerala cinema with us.</div></div></div>
+      <div class="vip-card rv d3"><img src="Vips/Urmila%20Unni.png" alt="Urmila Unni at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Arts</div><div class="vip-card-name">Urmila Unni</div><div class="vip-card-caption">Actress and classical dancer, captured inside our restaurant.</div></div></div>
+      <div class="vip-card rv"><img src="Vips/Priyanka%20Anoop.png" alt="Priyanka Anoop at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Entertainment</div><div class="vip-card-name">Priyanka Anoop</div><div class="vip-card-caption">Actress and television personality, adding to our wall of fame.</div></div></div>
+      <div class="vip-card rv d1"><img src="Vips/Kalabhavan%20Prajod%20and%20wife.png" alt="Kalabhavan Prajod at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Entertainment</div><div class="vip-card-name">Kalabhavan Prajod</div><div class="vip-card-caption">Actor and mimicry artist, visiting with family.</div></div></div>
+      <div class="vip-card rv d2"><img src="Vips/R%20L%20V%20Ramakrishnan.png" alt="RLV Ramakrishnan at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Culture</div><div class="vip-card-name">R. L. V. Ramakrishnan</div><div class="vip-card-caption">Classical dancer and cultural figure, at Nalla Bhoomi.</div></div></div>
+      <div class="vip-card rv d3"><img src="Vips/Haritha%20Savithri.png" alt="Haritha Savithri at Nalla Bhoomi"><div class="vip-card-overlay"></div><div class="vip-card-info"><div class="vip-card-cat">Literary</div><div class="vip-card-name">Haritha Savithri</div><div class="vip-card-caption">Writer and human rights activist, sharing a meaningful visit.</div></div></div>
     </div>
   </div>
 </section>
@@ -613,9 +615,9 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
       <div class="rv"><p class="s-tag">Google Reviews</p><h2 class="s-title">What Our <em>Guests</em> Say</h2></div>
       <div class="rating-block rv d2">
         <div>
-          <div class="rating-big">4.4</div>
+          <div class="rating-big">4.2</div>
           <span class="rating-stars">★★★★★</span>
-          <div class="rating-count">13,000+ Verified Reviews</div>
+          <div class="rating-count">4200+ Verified Reviews</div>
         </div>
         <div class="rating-bars">
           <div class="rb-row"><span style="width:10px;">5</span><div class="rb-bar"><div class="rb-fill" style="width:68%;"></div></div><span>68%</span></div>
@@ -636,7 +638,7 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
     </div>
     <div class="reviews-cta rv">
       <a href="https://www.google.com/maps/search/Nalla+Bhoomi+Family+Restaurant+Karunagappally" target="_blank" class="g-btn">
-        View All 13,000+ Reviews on Google →
+        View All 4200+ Reviews on Google →
       </a>
     </div>
   </div>
@@ -817,7 +819,7 @@ if ('IntersectionObserver' in window) {
     };
     const countObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        animCount(heroCount, 13000);
+        animCount(heroCount, 4200);
         countObserver.disconnect();
       }
     }, { threshold: .5 });
