@@ -792,6 +792,34 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
   .contact-grid > .rv.d2{padding-top:0;}
 }
 @media(max-width:600px){
+  .ld-word{
+    font-size:clamp(2.4rem,11vw,4.2rem);
+    letter-spacing:.08em;
+    gap:.5rem;
+    max-width:92vw;
+    overflow:visible;
+    flex-wrap:nowrap;
+  }
+  .ld-word img{width:clamp(28px,8vw,42px);}
+  .ld-ml{
+    font-size:.9rem;
+    letter-spacing:.12em;
+    text-align:center;
+    max-width:90vw;
+  }
+  .ld-line.on{width:min(220px,60vw);}
+  .dishes{padding:9rem 0;}
+  .dishes-head{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1.4rem;
+    margin-bottom:3rem;
+  }
+  .dishes-head > div,
+  .dishes-head > p{
+    width:100%;
+    max-width:none !important;
+  }
   .dishes-grid{grid-template-columns:1fr 1fr;}
   .vip-cards{grid-template-columns:1fr 1fr;}
   .ft-grid{grid-template-columns:1fr;}
