@@ -810,78 +810,175 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
 }
 @media(max-width:600px){
   nav{
-    justify-content:center;
-    padding:.7rem 1.25rem;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    justify-items:center;
+    padding:1.35rem 1.25rem 0;
+    background:none;
+    box-shadow:none;
+    backdrop-filter:none;
+  }
+  nav::before,
+  nav::after{
+    font-family:'Jost',sans-serif;
+    font-size:.55rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+  nav::before{
+    content:'Karunagappally · Kerala';
+    color:rgba(212,168,75,.6);
+    justify-self:start;
+  }
+  nav::after{
+    content:'NH 66';
+    color:rgba(249,246,240,.38);
+    justify-self:end;
   }
   .nav-logo{
     justify-content:center;
-    gap:.7rem;
-    text-align:left;
+    gap:0;
+    text-align:center;
+    font-size:0;
   }
   .nav-logo-img{
-    width:50px;
-    height:50px;
+    width:42px;
+    height:42px;
+    filter:drop-shadow(0 0 18px rgba(212,168,75,.14));
   }
   .nav-logo-text{
-    align-items:flex-start;
-  }
-  .nav-logo{
-    font-size:1.38rem;
-    letter-spacing:.1em;
-  }
-  .nav-logo span{
-    font-size:.72rem;
-    letter-spacing:.12em;
+    display:none;
   }
   .hero{
     min-height:100svh;
-    padding-top:106px;
+    padding-top:0;
+    justify-content:flex-start;
+  }
+  #h-bg{
+    opacity:.48;
+    background-position:58% center;
+    filter:saturate(.85) contrast(1.02);
   }
   .h-content{
     width:100%;
-    padding:0 1.5rem 2.25rem;
+    padding:8.4rem 1.6rem 4rem;
     justify-content:center;
+    align-items:flex-start;
+    text-align:left;
+    position:relative;
+  }
+  .h-content::before{
+    content:'';
+    width:86px;
+    height:86px;
+    margin-bottom:1.7rem;
+    border-radius:50%;
+    background:
+      radial-gradient(circle at center, rgba(0,0,0,0) 56%, rgba(212,168,75,.2) 57%, rgba(212,168,75,.2) 58%, rgba(0,0,0,0) 59%),
+      url('Logo.png') center/58px 58px no-repeat;
+    border:1px solid rgba(212,168,75,.26);
+    box-shadow:0 0 0 10px rgba(212,168,75,.06), 0 0 38px rgba(212,168,75,.1);
+    flex:0 0 auto;
   }
   .h-eyebrow{
-    font-size:.6rem;
-    letter-spacing:.42em;
-    margin-bottom:1.55rem;
+    display:flex;
+    align-items:center;
+    gap:.8rem;
+    font-size:.58rem;
+    letter-spacing:.34em;
+    margin-bottom:.95rem;
+    color:rgba(212,168,75,.82);
+  }
+  .h-eyebrow::before{
+    content:'';
+    width:28px;
+    height:1px;
+    background:rgba(212,168,75,.52);
+    flex:0 0 auto;
   }
   .h-ml{
-    font-size:1.02rem;
-    margin-bottom:.5rem;
+    font-size:.95rem;
+    margin-bottom:.2rem;
+    color:rgba(212,168,75,.62);
+    text-shadow:none;
   }
   .h-title{
-    font-size:clamp(4.6rem,20vw,6.6rem);
-    line-height:.9;
+    font-size:clamp(4.3rem,19vw,6.2rem);
+    line-height:.84;
+    letter-spacing:-.025em;
+    max-width:12rem;
+    margin-left:-.04em;
   }
+  .h-title em{color:var(--gold-l);}
   .h-rule{
-    margin:1.8rem auto 1.55rem;
+    width:78px;
+    margin:1.55rem 0 1.25rem;
   }
-  .h-sub{
-    max-width:17.5rem;
-    font-size:.8rem;
-    line-height:1.5;
-    letter-spacing:.22em;
+  .h-rule + .h-sub{
+    max-width:17rem;
+    font-size:.7rem;
+    line-height:1.55;
+    letter-spacing:.26em;
+    color:rgba(249,246,240,.76);
+    text-transform:uppercase;
   }
-  .h-sub + .h-sub{
+  .h-rule + .h-sub + .h-sub{
+    max-width:15.5rem;
     margin-top:1rem;
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.05rem;
+    line-height:1.6;
+    letter-spacing:.02em;
+    text-transform:none;
+    color:rgba(249,246,240,.62);
   }
   .h-actions{
-    width:100%;
-    margin-top:2.3rem;
-    gap:1rem;
+    width:min(100%,18.75rem);
+    margin-top:2.1rem;
+    gap:.8rem;
+    align-items:stretch;
   }
   .h-btn-p,
   .h-order-btn,
   .h-btn-s{
-    width:min(100%,21rem);
+    width:100%;
     justify-content:center;
+    min-height:54px;
+    padding:1rem 1.2rem;
+    font-family:'Jost',sans-serif;
+    font-size:.62rem;
+    letter-spacing:.28em;
+  }
+  .h-btn-p{
+    background:var(--gold);
+    color:#120d08;
+    clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+  .h-btn-s,
+  .h-order-btn{
+    background:rgba(8,8,8,.14);
+    border:1px solid rgba(249,246,240,.14);
+    color:rgba(249,246,240,.82);
+    backdrop-filter:blur(10px);
+  }
+  .h-order-drop{
+    width:100%;
+    min-width:0;
+    left:0;
+    right:0;
+    transform:none;
+    bottom:calc(100% + 8px);
+  }
+  .h-scroll{
+    display:none;
   }
   .h-vignette{
     background:
-      radial-gradient(circle at 50% 44%, rgba(255,214,150,.22) 0%, rgba(255,214,150,.12) 18%, rgba(0,0,0,0) 42%),
-      radial-gradient(ellipse at center, rgba(0,0,0,.04) 18%, rgba(0,0,0,.72) 100%);
+      linear-gradient(106deg, rgba(8,5,2,.93) 0%, rgba(8,5,2,.88) 44%, rgba(8,5,2,.56) 62%, rgba(8,5,2,.24) 100%),
+      radial-gradient(circle at 78% 28%, rgba(212,168,75,.12) 0%, rgba(212,168,75,0) 28%),
+      radial-gradient(circle at 78% 76%, rgba(122,46,20,.22) 0%, rgba(122,46,20,0) 30%);
   }
   .about-photo-caption{
     background:none;
