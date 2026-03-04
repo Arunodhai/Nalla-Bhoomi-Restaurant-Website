@@ -938,8 +938,11 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
   .h-actions{
     width:min(100%,18.75rem);
     margin-top:2.1rem;
-    gap:.8rem;
+    gap:.9rem;
     align-items:stretch;
+  }
+  .h-order-wrap{
+    width:100%;
   }
   .h-btn-p,
   .h-order-btn,
@@ -954,18 +957,23 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
     font-size:.62rem;
     letter-spacing:.28em;
     text-align:center;
+    clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
   }
   .h-btn-p{
     background:var(--gold);
     color:#120d08;
-    clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
   }
   .h-btn-s,
   .h-order-btn{
-    background:rgba(8,8,8,.14);
-    border:1px solid rgba(249,246,240,.14);
+    background:rgba(249,246,240,.06);
+    border:1px solid rgba(249,246,240,.18);
     color:rgba(249,246,240,.82);
     backdrop-filter:blur(10px);
+  }
+  .h-order-arrow{
+    position:absolute;
+    right:1rem;
+    margin-left:0;
   }
   .h-order-drop{
     width:100%;
@@ -980,9 +988,9 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
   }
   .h-vignette{
     background:
-      linear-gradient(106deg, rgba(8,5,2,.78) 0%, rgba(8,5,2,.7) 42%, rgba(8,5,2,.38) 62%, rgba(8,5,2,.12) 100%),
-      radial-gradient(circle at 78% 28%, rgba(212,168,75,.15) 0%, rgba(212,168,75,0) 32%),
-      radial-gradient(circle at 78% 76%, rgba(122,46,20,.16) 0%, rgba(122,46,20,0) 30%);
+      linear-gradient(106deg, rgba(8,5,2,.66) 0%, rgba(8,5,2,.56) 40%, rgba(8,5,2,.24) 62%, rgba(8,5,2,.06) 100%),
+      radial-gradient(circle at 78% 28%, rgba(212,168,75,.16) 0%, rgba(212,168,75,0) 34%),
+      radial-gradient(circle at 78% 76%, rgba(122,46,20,.12) 0%, rgba(122,46,20,0) 28%);
   }
   .about-photo-caption{
     background:none;
@@ -1110,7 +1118,7 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
     <h1 class="h-title"><strong>Nalla<br><em>Bhoomi</em></strong></h1>
     <div class="h-rule"></div>
     <p class="h-sub">Authentic Kerala Restaurant</p>
-    <p class="h-sub">Discover the Authentic Taste & Soul of Kerala.</p>
+    <p class="h-sub">Discover the Authentic Taste &amp;<br>Soul of Kerala.</p>
     <div class="h-actions">
       <a href="#dishes" class="h-btn-p">Explore Our Menu</a>
       <div class="h-order-wrap">
