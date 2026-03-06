@@ -97,8 +97,8 @@ html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:
 .content {
   position:relative; z-index:10;
   flex:1; display:flex; flex-direction:column;
-  align-items:center; justify-content:center;
-  text-align:center; padding:4px 18px 10px;
+  align-items:center; justify-content:flex-start;
+  text-align:center; padding:18px 18px 10px;
   max-width:420px;
   margin:0 auto;
 }
@@ -106,7 +106,7 @@ html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:
 .eyebrow {
   font-family:var(--fc); font-size:10px; letter-spacing:0.22em; color:var(--gold);
   display:flex; align-items:center; gap:12px;
-  margin-bottom:6px;
+  margin-bottom:14px;
   animation: slideDown 0.7s ease 0.3s both;
 }
 .eyebrow::before, .eyebrow::after { content:''; width:20px; height:1px; background:var(--gold); opacity:0.5; flex-shrink:0; }
@@ -136,12 +136,12 @@ html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:
 .ll { flex:1; height:1px; background:linear-gradient(90deg,transparent,rgba(201,151,58,0.38)); }
 .ll.r { background:linear-gradient(270deg,transparent,rgba(201,151,58,0.38)); }
 .logo {
-  width:144px; height:144px;
+  width:170px; height:170px;
   display:flex; align-items:center; justify-content:center;
   margin:0; flex-shrink:0;
   animation: scaleUp 0.8s cubic-bezier(0.34,1.56,0.64,1) 0.32s both;
 }
-.logo img { width:144px; height:144px; object-fit:contain; }
+.logo img { width:170px; height:170px; object-fit:contain; }
 
 .orn {
   display:flex; align-items:center; gap:9px;
@@ -322,39 +322,39 @@ html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:
 }
 
 @media (max-width: 430px) {
-  .content { padding:4px 12px 10px; }
+  .content { padding:16px 12px 10px; }
   .title-row { gap:8px; margin:2px 0 8px; }
   .t1 {
     font-size:clamp(44px, 13.4vw, 56px);
     letter-spacing:-0.02em;
   }
   .logo {
-    width:120px;
-    height:120px;
+    width:140px;
+    height:140px;
     margin:0;
   }
   .logo img {
-    width:120px;
-    height:120px;
+    width:140px;
+    height:140px;
   }
   .btns { top:48px; }
 }
 
 @media (max-width: 360px) {
-  .content { padding:4px 10px 10px; }
+  .content { padding:14px 10px 10px; }
   .title-row { gap:8px; margin:2px 0 8px; }
   .t1 {
     font-size:clamp(38px, 12.2vw, 46px);
     letter-spacing:-0.02em;
   }
   .logo {
-    width:102px;
-    height:102px;
+    width:122px;
+    height:122px;
     margin:0;
   }
   .logo img {
-    width:102px;
-    height:102px;
+    width:122px;
+    height:122px;
   }
   .sub {
     font-size:13px;
