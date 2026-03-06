@@ -132,6 +132,7 @@ html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:
   display:flex; align-items:center; justify-content:center;
   gap:8px;
   margin:6px 0 2px;
+  max-width:100%;
   animation: fadeIn 0.8s ease 0.42s both;
 }
 .ll { flex:1; height:1px; background:linear-gradient(90deg,transparent,rgba(201,151,58,0.38)); }
@@ -318,6 +319,24 @@ html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:
   .tile:hover { background:rgba(201,151,58,0.08); }
   .tile:hover .tl { color:var(--goldl); }
   .tile:hover .tv { color:var(--cream); }
+}
+
+@media (max-width: 430px) {
+  .content { padding:8px 12px 14px; }
+  .title-row { gap:4px; margin:4px 0 0; }
+  .t1, .t2 {
+    font-size:clamp(42px, 13vw, 54px);
+    letter-spacing:-0.02em;
+  }
+  .logo {
+    width:74px;
+    height:74px;
+    margin:0;
+  }
+  .logo img {
+    width:60px;
+    height:60px;
+  }
 }
 
 @media (max-width: 360px) {
