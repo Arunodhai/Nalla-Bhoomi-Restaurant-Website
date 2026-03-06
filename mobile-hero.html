@@ -18,7 +18,7 @@
 html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:hidden; }
 
 .hero {
-  position:relative; width:100%; height:100vh; height:100dvh;
+  position:relative; width:100%; height:100%;
   display:flex; flex-direction:column; overflow:hidden; background:var(--dark);
 }
 
@@ -28,9 +28,7 @@ html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:
   background-image: url('1image.jpg');
   background-size:cover;
   background-position:center 30%;
-  animation: bgZoom 3.5s ease forwards;
 }
-@keyframes bgZoom { from{transform:scale(1.07)} to{transform:scale(1)} }
 
 /*
   Smart overlay strategy for this particular image:
@@ -161,6 +159,8 @@ html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:
   display:flex; flex-direction:column; align-items:center;
   gap:10px; width:100%; max-width:288px;
   animation: slideUp 0.8s ease 0.75s both;
+  position:relative;
+  overflow:visible;
 }
 .btn {
   position:relative; overflow:hidden; isolation:isolate;
@@ -211,6 +211,62 @@ html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:
   animation:pulse 2s ease-in-out infinite;
 }
 @keyframes pulse { 0%,100%{box-shadow:0 0 4px #6bcb77} 50%{box-shadow:0 0 10px #6bcb77;opacity:0.8} }
+
+.order-wrap { position:relative; width:100%; }
+.order-btn { justify-content:space-between; }
+.order-arrow {
+  font-size:10px;
+  opacity:.65;
+  letter-spacing:0;
+  transition:transform .2s ease;
+}
+.order-btn.active .order-arrow { transform:rotate(180deg); }
+.order-drop {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:calc(100% + 8px);
+  display:none;
+  flex-direction:column;
+  background:rgba(5,4,1,0.96);
+  border:1px solid rgba(242,234,216,0.14);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  z-index:40;
+}
+.order-drop.open { display:flex; }
+.order-item {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 14px;
+  text-decoration:none;
+  border-bottom:1px solid rgba(242,234,216,0.08);
+}
+.order-item:last-child { border-bottom:none; }
+.order-item-dot {
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  flex-shrink:0;
+}
+.order-item-label {
+  font-family:var(--fc);
+  font-size:9px;
+  letter-spacing:0.2em;
+  color:rgba(242,234,216,0.78);
+}
+.order-item-label small {
+  display:block;
+  margin-top:2px;
+  font-family:var(--fd);
+  font-size:12px;
+  letter-spacing:0.02em;
+  color:rgba(242,234,216,0.46);
+}
+.oi-call .order-item-dot { background:#4ade80; }
+.oi-swiggy .order-item-dot { background:#fc8019; }
+.oi-zomato .order-item-dot { background:#e23744; }
 
 /* ── STRIP ── */
 .strip { position:relative; z-index:20; flex-shrink:0; animation: slideUp 0.8s ease 0.9s both; }
@@ -283,12 +339,32 @@ html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:
     <div class="orn"><div class="ol"></div><div class="od"></div><div class="ol r"></div></div>
     <p class="sub">Discover the Authentic Taste &amp; Soul of Kerala.</p>
     <div class="btns">
-      <a href="#" class="btn btn-p">
+      <a href="#dishes" target="_parent" class="btn btn-p">
         <span class="ck tl"></span><span class="ck tr"></span><span class="ck bl"></span><span class="ck br"></span>
         <span class="btn-txt">Explore Our Menu</span>
       </a>
-      <a href="#" class="btn btn-s"><span class="ldot"></span><span class="btn-txt">Order Now</span></a>
-      <a href="#" class="btn btn-s"><span class="btn-txt">📍&nbsp;&nbsp;Find Us on NH66</span></a>
+      <div class="order-wrap" id="orderWrap">
+        <button class="btn btn-s order-btn" id="orderBtn" type="button">
+          <span class="ldot"></span>
+          <span class="btn-txt">Order Now</span>
+          <span class="order-arrow">▼</span>
+        </button>
+        <div class="order-drop" id="orderDrop">
+          <a href="tel:+918606034505" class="order-item oi-call">
+            <span class="order-item-dot"></span>
+            <span class="order-item-label">Call to Order<small>+91 86060 34505</small></span>
+          </a>
+          <a href="https://www.swiggy.com/search?query=Nalla%20Bhoomi%20Karunagappally" target="_blank" rel="noopener" class="order-item oi-swiggy">
+            <span class="order-item-dot"></span>
+            <span class="order-item-label">Order on Swiggy<small>Home delivery</small></span>
+          </a>
+          <a href="https://www.zomato.com/search?q=Nalla%20Bhoomi%20Karunagappally" target="_blank" rel="noopener" class="order-item oi-zomato">
+            <span class="order-item-dot"></span>
+            <span class="order-item-label">Order on Zomato<small>Home delivery</small></span>
+          </a>
+        </div>
+      </div>
+      <a href="#contact" target="_parent" class="btn btn-s"><span class="btn-txt">📍&nbsp;&nbsp;Find Us on NH66</span></a>
     </div>
   </div>
 
@@ -306,9 +382,25 @@ html, body { height:100%; margin:0; padding:0; background:var(--dark); overflow:
 <script>
 const segs=['Kerala Sadya','Malabar Biryani','Fresh Seafood','Authentic Spices','Open 7–10 PM','NH 66 · Karunagappally'];
 const mqEl=document.getElementById('mq');
+const orderWrap=document.getElementById('orderWrap');
+const orderBtn=document.getElementById('orderBtn');
+const orderDrop=document.getElementById('orderDrop');
 let h='';
 for(let i=0;i<2;i++) segs.forEach(s=>h+=`<span class="ms">${s}<span class="md"></span></span>`);
 mqEl.innerHTML=h;
+
+if(orderBtn&&orderDrop){
+  orderBtn.addEventListener('click',()=>{
+    orderBtn.classList.toggle('active');
+    orderDrop.classList.toggle('open');
+  });
+  document.addEventListener('click',(e)=>{
+    if(orderWrap&&!orderWrap.contains(e.target)){
+      orderBtn.classList.remove('active');
+      orderDrop.classList.remove('open');
+    }
+  });
+}
 
 const cvs=document.getElementById('cvs'),ctx=cvs.getContext('2d');
 function resize(){cvs.width=window.innerWidth;cvs.height=window.innerHeight;}
