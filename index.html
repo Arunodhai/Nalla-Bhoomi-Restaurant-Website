@@ -774,6 +774,9 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
 /* ─── FLOATS ─── */
 
 
+/* ─── READ MORE BUTTON (mobile only) ─── */
+.about-read-more{display:none;}
+
 /* ─── REVEAL ─── */
 .rv{opacity:0;transform:translateY(38px);transition:opacity .95s ease,transform .95s ease;}
 .rv.vis{opacity:1;transform:translateY(0);}
@@ -1077,6 +1080,66 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
   .about-stat{min-height:auto;border-right:none;}
   .about-stat:nth-last-child(-n+2){border-bottom:1px solid rgba(26,22,16,.1);}
   .about-stat:last-child{border-bottom:none;}
+
+  /* ── STORY SECTION: MOBILE COMPACT ── */
+  .about{padding:0;}
+  .about-photo{height:62vw;min-height:0;}
+  .about-main{padding:28px 20px 20px;}
+  .about-headline{padding:12px 0 10px;}
+  .about-headline h2{font-size:clamp(30px,7.5vw,46px);}
+  .about-body{font-size:14px;line-height:1.72;margin-bottom:14px;}
+
+  /* Hide 2nd and 3rd body paragraphs behind a toggle */
+  .about-body-extra{display:none;}
+  .about-body-extra.expanded{display:block;}
+  .about-read-more{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:'Jost',sans-serif;
+    font-size:9px;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    font-weight:500;
+    color:#b8860b;
+    background:none;
+    border:none;
+    border-bottom:1px solid #b8860b;
+    padding-bottom:2px;
+    cursor:pointer;
+    margin-bottom:20px;
+    font-family:'DM Sans',sans-serif;
+  }
+  .about-read-more-arrow{transition:transform .3s;font-size:.65rem;}
+  .about-read-more.open .about-read-more-arrow{transform:rotate(180deg);}
+
+  /* Compact feats grid */
+  .about-feats{grid-template-columns:1fr 1fr;gap:1px;border-radius:10px;margin-bottom:16px;}
+  .about-feat{padding:12px 14px;gap:8px;}
+  .about-feat-icon{font-size:16px;}
+  .about-feat-t{font-size:12px;}
+  .about-feat-d{font-size:10px;}
+
+  /* Sidebar: strip it down on mobile */
+  .about-sidebar{display:block;}
+  .about-manifesto{padding:22px 20px;background:#141210;}
+  .about-manifesto-quote{
+    font-size:clamp(1.15rem,4.5vw,1.5rem);
+    line-height:1.38;
+    display:block;
+  }
+  .about-manifesto-footer{font-size:11px;margin-top:14px;}
+
+  /* Stats: 2-column compact */
+  .about-stats{grid-template-columns:1fr 1fr;width:100%;}
+  .about-stat{min-height:auto;padding:14px 16px;gap:8px;}
+  .about-stat-icon{font-size:15px;}
+  .about-stat-num{font-size:20px;}
+  .about-stat-label{font-size:8.5px;}
+  .about-stat-copy{font-size:10px;line-height:1.45;}
+  .about-stat:nth-child(2n){border-right:none;}
+  .about-stat:nth-last-child(-n+2){border-bottom:none;}
+  .about-bottom{flex-direction:row;align-items:center;flex-wrap:wrap;gap:.8rem;padding-top:14px;margin-top:14px;}
 }
 @media(max-width:640px){
   .reviews{padding:10rem 0;}
@@ -1218,9 +1281,11 @@ footer{background:var(--black);border-top:1px solid #111;padding:8rem 5vw 3rem;}
         </div>
         <p class="about-body">Born from a deep-rooted respect for the soil, <strong>Nalla Bhoomi Family Restaurant </strong>is more than just a place to eat in <strong>Karunagappally</strong>—it is a movement shaped by the belief that the <strong>"Good Earth" </strong>provides everything when treated with honor. Our journey was inspired by a grand inauguration by the legendary <strong>Chef Pillai</strong>, whose commitment to Kerala’s culinary legacy led us to revive the forgotten, authentic flavors of our land.</p>
 
-          <p class="about-body"> From the aroma of our signature Kizhi Biryani steamed in banana leaves to soulful classics like Beef Masala, Duck Mappas, and Kuttanad Chicken Curry with flaky Porottas, every plate is crafted to feel like a memory from home. Whether you are stopping for a homely breakfast of Appam and Idiyappam or a traditional Fish Biryani, our nadan specials offer a true taste of <strong>South Indian heritage</strong>.</p>
+          <button class="about-read-more" id="aboutReadMore" onclick="toggleAboutText(this)" aria-expanded="false">Read More <span class="about-read-more-arrow">▼</span></button>
+
+          <p class="about-body about-body-extra"> From the aroma of our signature Kizhi Biryani steamed in banana leaves to soulful classics like Beef Masala, Duck Mappas, and Kuttanad Chicken Curry with flaky Porottas, every plate is crafted to feel like a memory from home. Whether you are stopping for a homely breakfast of Appam and Idiyappam or a traditional Fish Biryani, our nadan specials offer a true taste of <strong>South Indian heritage</strong>.</p>
           
-            <p class="about-body"> Situated as a premier pitstop on the NH66, we bridge tradition with the future. With our pioneering <strong>"No Food Waste"</strong> mission and high-speed EV charging facilities, we invite families and travelers to recharge both themselves and their journeys with conscience and care. At Nalla Bhoomi, every detail is designed with purpose, ensuring that all that lingers after your visit is the memory of a perfect meal.</p>
+            <p class="about-body about-body-extra"> Situated as a premier pitstop on the NH66, we bridge tradition with the future. With our pioneering <strong>"No Food Waste"</strong> mission and high-speed EV charging facilities, we invite families and travelers to recharge both themselves and their journeys with conscience and care. At Nalla Bhoomi, every detail is designed with purpose, ensuring that all that lingers after your visit is the memory of a perfect meal.</p>
     
         <div class="about-bottom">
           <div class="about-location">NH66 · Karunagappally, Kerala</div>
@@ -1991,6 +2056,16 @@ document.addEventListener('click', e => {
     if (orderDrop) orderDrop.classList.remove('open');
   }
 });
+
+function toggleAboutText(btn) {
+  const extras = document.querySelectorAll('.about-body-extra');
+  const isOpen = btn.classList.contains('open');
+  extras.forEach(el => el.classList.toggle('expanded', !isOpen));
+  btn.classList.toggle('open', !isOpen);
+  btn.setAttribute('aria-expanded', !isOpen);
+  const arrow = btn.querySelector('.about-read-more-arrow');
+  btn.childNodes[0].textContent = isOpen ? 'Read More ' : 'Read Less ';
+}
 
 function toggleFaq(btn) {
   const item = btn.parentElement;
